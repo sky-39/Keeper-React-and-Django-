@@ -3,14 +3,14 @@ import './note.css'
 
 function Note(props) {
   
-  function handleClick() {
+  const handleClick = async () => {
     props.onDelete(props.id);
   }
 
   return (
     <div className="note">
       <h1>{props.title}</h1>
-      <p>{props.content}</p>
+      <p>{props.description}</p>
       <button onClick={handleClick}>
       －
       </button>
